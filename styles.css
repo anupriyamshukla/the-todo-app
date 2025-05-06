@@ -1,0 +1,294 @@
+@import url('./ClashGrotesk_Complete/Fonts/WEB/css/clash-grotesk.css');
+
+* {
+    box-sizing: border-box; /* Changed to border-box for more predictable sizing */
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'ClashGrotesk-Regular';
+    padding: 20px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'ClashGrotesk-Regular';
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.container {
+    min-width: 500px;
+    max-width: 500px;
+    padding: 5px; 
+    border: 2px solid black;
+    display: flex;
+}
+
+input {
+    font-family: 'ClashGrotesk-Regular';
+    font-weight: 700;
+    border: 2px solid black;
+    padding: 16px;
+    flex: 1;
+    font-size: 16px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.add-task-btn {
+    font-family: 'ClashGrotesk-Regular';
+    font-weight: 700;
+    cursor: pointer;
+    border: 2px solid black;
+    background-color: white;
+    padding: 16px;
+    transition: background-color 0.2s ease;
+    font-size: 16px;
+}
+
+.add-task-btn:hover {
+    background-color: wheat;
+}
+
+article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'ClashGrotesk-Regular';
+    margin: 10px 0;
+    font-size: 32px;
+}
+
+.task-container {
+    font-family: 'ClashGrotesk-Regular';
+    font-weight: 600;
+    font-size: 24px;
+    min-width: 500px;
+    max-width: 500px;
+    margin-top: 50px;
+    padding: 15px;
+    border: 2px solid black;
+}
+
+/* Task List Styling */
+.task-list {
+    list-style-type: none;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 5px;
+    border-bottom: 1px solid black;
+}
+
+.task-item:last-child {
+    border-bottom: none;
+}
+
+.task-text {
+    cursor: pointer;
+}
+
+.completed .task-text {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.delete-btn {
+    font-family: 'ClashGrotesk-Regular';
+    font-weight: 600;
+    background-color: wheat;
+    border: 2px solid black;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+}
+
+.delete-btn:hover {
+    background-color: #e6d2ae; /* Slightly darker wheat color on hover */
+}
+
+.empty-message {
+    text-align: center;
+    padding: 15px;
+    font-style: italic;
+    color: #666;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .container, .task-container {
+        min-width: 90%;
+        max-width: 90%;
+    }
+    
+    h1 {
+        font-size: 36px;
+    }
+    
+    input, .add-task-btn {
+        padding: 12px;
+    }
+}
+
+/* Footer Styles */
+.footer {
+    margin-top: 50px;
+    padding: 20px 0;
+    border-top: 2px solid black;
+    font-family: 'ClashGrotesk-Regular';
+}
+
+.footer-content {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-section {
+    text-align: center;
+}
+
+.copyright {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.footer-link {
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+}
+
+.footer-link:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: black;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.footer-link:hover:after {
+    transform: scaleX(1);
+}
+
+@media (max-width: 600px) {
+    .footer-content {
+        max-width: 90%;
+    }
+    
+    .footer-link {
+        margin: 0 8px;
+        font-size: 13px;
+    }
+}
+
+/* Footer Styles - Fixed at bottom */
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'ClashGrotesk-Regular';
+    padding: 20px;
+    min-height: 100%;
+    position: relative;
+    padding-bottom: 120px; /* Ensure space for footer */
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    border-top: 2px solid black;
+    font-family: 'ClashGrotesk-Regular';
+    background-color: white; /* Ensures text readability */
+}
+
+.footer-content {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-section {
+    text-align: center;
+}
+
+.copyright {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.footer-link {
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+}
+
+.footer-link:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: black;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.footer-link:hover:after {
+    transform: scaleX(1);
+}
+
+@media (max-width: 600px) {
+    .footer-content {
+        max-width: 90%;
+    }
+    
+    .footer-link {
+        margin: 0 8px;
+        font-size: 13px;
+    }
+    
+    body {
+        padding-bottom: 140px; /* More space on mobile */
+    }
+}
